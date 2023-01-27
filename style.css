@@ -131,16 +131,21 @@ input[type=search]{
     background-image: linear-gradient(rgb(1, 57, 92), rgba(0, 0, 0, 0.454)),url("assets/img/fondo_pantalla.jpg");
     height: auto;
     min-height: 100vh;
+    
   }
   #banner{
     height: auto;
     min-height: 80vh;
-    padding: 30px 20px 20px 20px;
+    width: 100%;
     display: flex;
-
     align-items: center;
   }
   
+  #banner-panel{
+    padding: 50px;
+    background-color: #e4e4e427;
+  }
+
   #stabletalks{
     height: auto;
     min-height: 60vh;
@@ -153,6 +158,11 @@ input[type=search]{
   #txt-titulo{
     color: white;
     font-size: 62px;
+    font-weight: 600;
+  }
+  #txt-titulo-proyecto{
+    color: #083553;
+    font-size: 40px;
     font-weight: 600;
   }
 
@@ -461,4 +471,24 @@ input[type=search]{
         color: #083553!important;
         background: #fff;
 
+        }
+       
+      
+        @media only screen and (max-width: 600px) {
+          #txt-titulo {
+            font-size: 50px;
+          }
+          #txt-titulo-proyecto{
+            font-size: 30px;
+            margin-top: 15px;
+          }
+          #txt-description{
+            font-size: 19px;
+          }
+          #logo{
+            width: 150px;
+          }
+          #banner-panel{
+            padding: 0px;
+          }
         }
