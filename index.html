@@ -49,44 +49,56 @@
 
     <section class="fondo-principal">
         <div class="contenedor">
-            <nav class="navbar navbar-expand-lg navbar-dark ">
-                <div class="container-fluid" style="padding: 10px 0px">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="assets/img/logo_blanco.png" width="250" height="85" alt="" id="logo">
-                    </a>
-                    <div>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="articulos.html">Inicio <span
-                                            class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="stgeneral.html">Servicio</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#pxopedia.html">Nosotros</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#pxopedia.html">|</a>
-                                </li>
+            
 
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#pxopedia.html"><i class="fa-brands fa-facebook"></i></a>
-                                </li>
 
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#pxopedia.html"><i class="fa-brands fa-whatsapp"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+
+
+
+
+
+
+            <header class="main-header" >
+                <a class="main-logo" href="https://progradudi.netlify.app" >
+                <img src="assets/img/logo_blanco.png" width="250" height="85" alt="" id="logo">
+                </a>
+                <nav id="nav" class="main-nav" >
+                  <div class="nav-links" >
+                    <a class="nav-link nav-title" href="articulos.html">Inicio <span
+                        class="sr-only">(current)</span></a>
+                    <a class="nav-link nav-title" href="stgeneral.html">Servicio</a>
+                    <a class="nav-link nav-title" href="#pxopedia.html">Nosotros</a>
+                    <a class="nav-link nav-title d-none d-lg-block d-xl-none" href="#pxopedia.html">|</a>
+                    <a class="nav-link nav-title" href="#pxopedia.html"><i class="fa-brands fa-facebook"></i></a>
+                    <a class="nav-link nav-title" href="#pxopedia.html"><i class="fa-brands fa-whatsapp"></i></a>
+
+
+                  </div>
+                </nav>
+                <button id="button-menu" class="button-menu" >
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+              </header>
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <a href="#" class="btn-flotante2 animate__animated animate__bounce  		
             d-none d-xl-block"><i class="fa-brands fa-whatsapp" style="font-size: 32px;"></i></a>
 
@@ -137,16 +149,16 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
                             <div class="item active">
-                                <img src="assets/galeria/image0.jpeg" alt="Los Angeles" style="width:100%;">
+                                <img src="assets\galeria\image0.jpeg" alt="Los Angeles" style="width:100%;">
                             </div>
                             <div class="item">
-                                <img src="assets/galeria/image1.jpeg" alt="Los Angeles" style="width:100%;">
+                                <img src="assets\galeria\image1.jpeg" alt="Los Angeles" style="width:100%;">
                             </div>
                             <div class="item">
-                                <img src="assets/galeria/image2.jpeg" alt="Los Angeles" style="width:100%;">
+                                <img src="assets\galeria\image2.jpeg" alt="Los Angeles" style="width:100%;">
                             </div>
                             <div class="item">
-                                <img src="assets/galeria/image3.jpeg" alt="Los Angeles" style="width:100%;">
+                                <img src="assets\galeria\image3.jpeg" alt="Los Angeles" style="width:100%;">
                             </div>
                         </div>
             
@@ -174,6 +186,30 @@
 
 
 <script>
+    const toggleButton = document.getElementById("button-menu");
+const navWrapper = document.getElementById("nav");
+
+/* 
+  cada ves que se haga click en el botón 
+  agrega y quita las clases necesarias 
+  para que el menú se muestre.
+*/
+toggleButton.addEventListener("click", () => {
+  toggleButton.classList.toggle("close");
+  navWrapper.classList.toggle("show");
+});
+
+/* 
+  Cuándo se haga click fuera del contenedor de enlaces 
+  el menú debe esconderse.
+*/
+
+navWrapper.addEventListener("click", e => {
+  if (e.target.id === "nav") {
+    navWrapper.classList.remove("show");
+    toggleButton.classList.remove("close");
+  }
+});
 </script>
 
 
