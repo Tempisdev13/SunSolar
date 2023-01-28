@@ -6,7 +6,9 @@
   --hovered-thumb: rgba(139, 216, 198, 0.35);
   --lightbox-header: rgba(0, 0, 0, 0.3);
 }
-
+body{
+  
+}
 * {
   padding: 0;
   margin: 0;
@@ -136,11 +138,6 @@ input[type=search]{
     display: flex;
     align-items: center;
   }
-  
-  #banner-panel{
-    padding: 50px;
-    background-color: #e4e4e427;
-  }
 
   #stabletalks{
     height: auto;
@@ -261,9 +258,7 @@ input[type=search]{
         text-align: end;
     }
 
-    .container-stable{
-        text-align: center;
-    }
+
 
     #title-comunidad{
       text-align: left;
